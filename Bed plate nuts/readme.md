@@ -28,4 +28,3 @@ En el primer paso la impresora calentará cama y nozzle, se centrará y tomará 
 
 
 Para realizar el proceso pulsa el botón _NUT_1_CENTER_ y esperar a que caliente y se centre en la cama. Con los sucesivos _NUT_2_..._, _NUT_3_..., ... hacemos el ajuste. Repetir 2 a 5 de nuevo. Finalmente _NUT_6_END_ levanta el nozzle y enfría el conjunto.
-
