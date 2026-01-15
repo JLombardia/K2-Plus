@@ -1,7 +1,7 @@
 # K2-Plus
 ## Improvements and setups
 ## Mejoras y configuraciones
-=========================
+
 - Extruder LED.
 Turn on and off the led in the extruder,
 Enciende y apaga el LED en el extrusor.
