@@ -1,3 +1,5 @@
+### English
+
 When using a "frosted" cold plate for PLA printing, the K2 firmware prevents us from turning off the heated bed or using values below 30°C. This is a firmware-level restriction. This can be bypassed using an override macro that executes at the start of every print. By setting a value in the slicer below 25°C (e.g., 10°C), the macro will detect the low setpoint and prevent the bed from heating.
 
 Two macros, M140 and M190, are created to rename and replace the standard commands with M140.1 and M190.1. These macros effectively suppress the heating command, allowing for "cold printing."
