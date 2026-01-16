@@ -1,43 +1,39 @@
 #### English
-The Skew Correction feature calibrates the proportionality between the X and Y axes. The required values can be obtained by measuring dimensional accuracy on the X and Y axes using calibration prints such as the Califlor (also known as Fleur de Cali or CaliStar, which is highly recommended).  
-This project is available at GitHub in https://github.com/dirtdigger/fleur_de_cali, and there is a compiled version with a local web interface on Printables at https://www.printables.com/model/778188-calistar-parametric-open-source-alternative-to-cal. Here you can download a compressed file containing the models and an index.html file. Opening this file allows you to input your measurements to calculate both filament shrinkage/expansion (for maximum dimensional precision) and the skew value.  
-  
-To avoid restarting the printer every time these parameters are modified, we use variables that are loaded at the start of each print. This ensures changes are applied immediately without a reboot.
+You may have noticed that the Z-Offset adjustment is lost after every printer reboot. This occurs because of a firmware-level protection that resets the offset to zero upon startup, causing you to lose your calibration.  
+To resolve this, we must store the offset value as a persistent variable that is automatically reloaded at the start of every print.  
 
-- Edit _printer.cfg_ and add the following line to the initial _includes_ section:
+Edit _printer.cfg_ and add the following line to the initial _includes_ section:
 
      ````
-     [include macro___set_skew_correction.cfg]
+     [include macro___set_z_offset.cfg]
      ````
 
-- In the same printer.cfg file, go to the very end (just before the #*# auto-generated section) and insert:
+- In the same _printer.cfg_ file, scroll to the end. Just before the auto-generated section (marked by #*#), add the following block if it does not already exist:
 
      ````
      [save_variables]
-     # File where custom variables will be stored.
+     # Fichero en el que guardaremos nuestras variables personalizadas.
      filename: ~/printer_data/config/variables.cfg
-     
-     [skew_correction]
-     # Block enabled for skew adjustment.     ````
      ````
+     
+- If it doesn’t exist, create an empty file named _variables.cfg_ in your configuration directory.
 
-- If it does not already exist, create an empty file named _variables.cfg_ in the configuration folder.  
+- Upload or copy the file _macro___set_z_offset.cfg_ into the configuration folder.
 
-- Copy the file _macro___set_skew_correction.cfg_ into the configuration folder.
-
-- Edit _gcode_macro.cfg_ and locate the _[gcode_macro START_PRINT]_ section. At the very beginning of thes ection, add:  
+- Edit _gcode_macro.cfg_ and locate the _[gcode_macro START_PRINT]_ section.  
+  At the very beginning (the first line), insert the following unless it is already there:
 
      ````
      variable_prepare: 0
      ````
 
-  At the very end of the same section, append the following line:
+     At the very end of the same section, append::
 
      ````
-     SET_MY_SKEW
+     APPLY_USER_Z_OFFSET
      ````
 
-Once configured, a new macro button named _SET_USER_SKEW_ will appear with a dropdown arrow. Clicking this will allow you to input your calculated values. These will be stored in _variables.cfg_ and automatically applied at the start of every print.  
+From this point forward, you will see a new macro button named SET_USER_Z with a dropdown arrow. Clicking this allows you to input your desired Z-Offset. The value will be stored in _variables.cfg_ and applied automatically to every print, remaining persistent even after a printer reboot.
 
   
 
