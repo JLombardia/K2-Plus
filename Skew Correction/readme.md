@@ -1,6 +1,6 @@
 #### English
 The Skew Correction feature calibrates the proportionality between the X and Y axes. The required values can be obtained by measuring dimensional accuracy on the X and Y axes using calibration prints such as the Califlor (also known as Fleur de Cali or CaliStar, which is highly recommended).  
-This project is available at GitHub in https://github.com/dirtdigger/fleur_de_cali, and there is a compiled version with a local web interfaceon Printables at https://www.printables.com/model/778188-calistar-parametric-open-source-alternative-to-cal. Here you can download a compressed file containing the models and an index.html file. Opening this file allows you to input your measurements to calculate both filament shrinkage/expansion (for maximum dimensional precision) and the skew value.  
+This project is available at GitHub in https://github.com/dirtdigger/fleur_de_cali, and there is a compiled version with a local web interface on Printables at https://www.printables.com/model/778188-calistar-parametric-open-source-alternative-to-cal. Here you can download a compressed file containing the models and an index.html file. Opening this file allows you to input your measurements to calculate both filament shrinkage/expansion (for maximum dimensional precision) and the skew value.  
   
 To avoid restarting the printer every time these parameters are modified, we use variables that are loaded at the start of each print. This ensures changes are applied immediately without a reboot.
 
