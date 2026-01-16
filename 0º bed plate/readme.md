@@ -8,6 +8,7 @@ Two macros, M140 and M190, are created to rename and replace the standard comman
      [include macro__placa_fria_cero_grados.cfg]
      ````
 
+The process is fully automated. Simply set the Bed Temperature in your slicer to any value below 25°C. When the print begins, the firmware will intercept the command and the bed will remain powered off.
 
 
 ### Spanish  
