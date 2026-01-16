@@ -1,14 +1,45 @@
 #### English
-- Edit the file _printer.cfg_ and add in the includes section the line:
- 
+The Skew Correction feature calibrates the proportionality between the X and Y axes. The required values can be obtained by measuring dimensional accuracy on the X and Y axes using calibration prints such as the Califlor (also known as Fleur de Cali or CaliStar, which is highly recommended).  
+This project is available at GitHub in https://github.com/dirtdigger/fleur_de_cali, and there is a compiled version with a local web interfaceon Printables at https://www.printables.com/model/778188-calistar-parametric-open-source-alternative-to-cal. Here you can download a compressed file containing the models and an index.html file. Opening this file allows you to input your measurements to calculate both filament shrinkage/expansion (for maximum dimensional precision) and the skew value.  
+  
+To avoid restarting the printer every time these parameters are modified, we use variables that are loaded at the start of each print. This ensures changes are applied immediately without a reboot.
+
+- Edit _printer.cfg_ and add the following line to the initial _includes_ section:
+
      ````
-     [include macro___led_extrusor.cfg]
+     [include macro___set_skew_correction.cfg]
      ````
 
-- Copy the file _macro___led_extrusor.cfg_ to the configuration folder.
+- In the same printer.cfg file, go to the very end (just before the #*# auto-generated section) and insert:
 
+     ````
+     [save_variables]
+     # File where custom variables will be stored.
+     filename: ~/printer_data/config/variables.cfg
+     
+     [skew_correction]
+     # Block enabled for skew adjustment.     ````
+     ````
 
-You can turn on and off from the macro buttons _NOZZLE_LED_ON_ and _NOZZLE_LED_OFF_
+- If it does not already exist, create an empty file named _variables.cfg_ in the configuration folder.  
+
+- Copy the file _macro___set_skew_correction.cfg_ into the configuration folder.
+
+- Edit _gcode_macro.cfg_ and locate the _[gcode_macro START_PRINT]_ section. At the very beginning of thes ection, add:  
+
+     ````
+     variable_prepare: 0
+     ````
+
+  At the very end of the same section, append the following line:
+
+     ````
+     SET_MY_SKEW
+     ````
+
+Once configured, a new macro button named _SET_USER_SKEW_ will appear with a dropdown arrow. Clicking this will allow you to input your calculated values. These will be stored in _variables.cfg_ and automatically applied at the start of every print.  
+
+  
 
 #### Spanish
 La llamada _skew correction_ corrige la proporcionalidad entre los ejes x e y. El valor se puede obtener cuando hacemos un ajuste de tamaño de estos ejes con impresiones como la _califlor o flor de cali_, tambien llamado _calistar_ que es el que yo recomiendo. Lo tenemos disponible en el proyecto https://github.com/dirtdigger/fleur_de_cali que tiene la web implementada para ejecutarse localmente en printables por el autor del proyecto. En https://www.printables.com/model/778188-calistar-parametric-open-source-alternative-to-cal descargamos un comprimido en cuyo interior tenemos los modelos y un fichero index.htm que al abrir nos permite meter los datos que midamos en la pieza impresa obteniendo finalmente el valor de contracción/expansión del filamento, buscando la mayor precisión en tamaño, y obtenemos el valor de skew.  
