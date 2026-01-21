@@ -35,7 +35,7 @@ Instead of displaying raw millimeter values that are hard to interpret, this mac
 
 
 ## Spanish
-El objetivo de este mcro es facilitar el nivelado manual (tramming) de la cama caliente para dejarla perfectamente paralela a los ejes X e Y.  
+El objetivo de esta macro es facilitar el nivelado manual (tramming) de la cama caliente para dejarla perfectamente paralela a los ejes X e Y.  
 En lugar de mostrar valores crudos en milímetros difíciles de interpretar, este macro calcula exactamente cuánto debes girar cada tuerca utilizando la _metáfora del reloj_.  
 
 
