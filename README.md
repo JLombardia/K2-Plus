@@ -8,9 +8,9 @@ Turn on and off the led in the extruder.
 Enciende y apaga el LED en el extrusor.  
 
 
-- **Bed plate nuts.**  
-Made easily a classic levelling with the nuts below the bed.  
-Hace fácilmente el ajuste clásico de las tuercas por debajo de la cama.  
+- **Horizon levelling.**  
+Simplify manual bed tramming, ensuring the bed is perfectly parallel to the X and Y axes.
+Hace fácilmente el ajuste clásico de las tuercas por debajo de la cama, para que la cama esté paralela a los ejes x e y.  
 
   
 - **0º bed plate.**  

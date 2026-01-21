@@ -15,10 +15,10 @@ Instead of displaying raw millimeter values that are hard to interpret, this mac
 1.  Edit the file _printer.cfg_ and add in the includes section the line:
  
      ````
-     [include macro___horizon_leveling.cfg]
+     [include macro___horizon_levelling.cfg]
      ````
 
-2.	Copy the file _macro___horizon_leveling.cfg_ to the configuration folder.
+2.	Copy the file _macro___horizon_levelling.cfg_ to the configuration folder.
 3.  Adjust the `variable_screw_pitch` if your screws are not standard (M4 = 0.7mm).
 4.  **Important:** Verify the coordinates in `_HORIZON_VARS`. Ensure the probe (not the nozzle) is positioned directly above the screws.
   
