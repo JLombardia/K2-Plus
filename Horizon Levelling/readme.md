@@ -35,9 +35,12 @@ Instead of displaying raw millimeter values that are hard to interpret, this mac
 There is a STL file with a nut handle. After print, insert and glue them in the original nut. It has 12 lines than you can paint in contrast to do the adjustment easier. Clcik in the image for 3D viewer and download it.  
 
 	
-[![View and download](/_assets/bed_nut_handle.png)](/_assets/bed_nut_handle.stl)
-
-
+<div align="center">
+	[![View and download](/_assets/bed_nut_handle.png)](/_assets/bed_nut_handle.stl)
+</div>
+  
+  
+  
 ## Spanish
 El objetivo de esta macro es facilitar el nivelado manual (tramming) de la cama caliente para dejarla perfectamente paralela a los ejes X e Y.  
 En lugar de mostrar valores crudos en milímetros difíciles de interpretar, este macro calcula exactamente cuánto debes girar cada tuerca utilizando la _metáfora del reloj_.  
@@ -75,5 +78,6 @@ En lugar de mostrar valores crudos en milímetros difíciles de interpretar, est
 Hay un fichero STL con un adaptador a la tuerca original. Tras imprimir se puede insertar esta y pegarla. El adaptador tiene 12 lineas que pueden ser pintadas en contraste para un ajuste mas sencillo. Click en la imagen para abrir el visor 3D y descargar el fichero STL.  
 
   
-[![Ver y descargar](/_assets/bed_nut_handle.png)](/_assets/bed_nut_handle.stl)
-
+<div align="center">
+	[![Ver y descargar](/_assets/bed_nut_handle.png)](/_assets/bed_nut_handle.stl)
+</div>
