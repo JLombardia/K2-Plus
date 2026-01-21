@@ -36,7 +36,9 @@ There is a STL file with a nut handle. After print, insert and glue them in the 
 
 	
 <div align="center">
+
 	[![View and download](/_assets/bed_nut_handle.png)](/_assets/bed_nut_handle.stl)
+
 </div>
   
   
@@ -79,5 +81,7 @@ Hay un fichero STL con un adaptador a la tuerca original. Tras imprimir se puede
 
   
 <div align="center">
+	
 	[![Ver y descargar](/_assets/bed_nut_handle.png)](/_assets/bed_nut_handle.stl)
+
 </div>
