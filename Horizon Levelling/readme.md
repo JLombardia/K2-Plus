@@ -32,6 +32,10 @@ Instead of displaying raw millimeter values that are hard to interpret, this mac
 5.  Make the manual adjustment and repeat the measurement until it says "PERFECT".
 6.  Repeat for `HORIZON_2_RL` and `HORIZON_3_FR`.
 
+There is a STL file with a nut handle. After print, insert and glue them in the original nut. It has 12 lines than you can paint in contrast to do the adjustment easier.  
+
+	
+[![model preview](./_assets/bed_nut_handle.png)](./_assets/bed_nut_handle.stl)
 
 
 ## Spanish
@@ -66,3 +70,10 @@ En lugar de mostrar valores crudos en milímetros difíciles de interpretar, est
     > *ACTION: SCREW (Tighten/Right) -> 3 positions (hours).*
 5.  Realiza el ajuste manual y repite la medición hasta que diga "PERFECT".
 6.  Repite para `HORIZON_2_RL` y `HORIZON_3_FR`.
+
+
+Hay un fichero STL con un adaptador a la tuerca original. Tras imprimir se puede insertar esta y pegarla. El adaptador tiene 12 lineas que pueden ser pintadas en contraste para un ajuste mas sencillo.  
+
+  
+[![Vista previa del modelo](./_assets/bed_nut_handle.png)](./_assets/bed_nut_handle.stl)
+
