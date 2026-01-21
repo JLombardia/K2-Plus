@@ -44,6 +44,8 @@ There is a STL file with a nut handle. After print, insert and glue them in the 
   
   
   
+  
+  
 ## Spanish
 El objetivo de esta macro es facilitar el nivelado manual (tramming) de la cama caliente para dejarla perfectamente paralela a los ejes X e Y.  
 En lugar de mostrar valores crudos en milímetros difíciles de interpretar, este macro calcula exactamente cuánto debes girar cada tuerca utilizando la _metáfora del reloj_.  
