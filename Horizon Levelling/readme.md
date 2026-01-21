@@ -36,9 +36,10 @@ There is a STL file with a nut handle. After print, insert and glue them in the 
 
 	
 <div align="center">
-
-	[![View and download](/_assets/bed_nut_handle.png)](/_assets/bed_nut_handle.stl)
-
+  <a href="/_assets/bed_nut_handle.stl">
+    <img src="/_assets/bed_nut_handle.png" alt="View and download">
+  </a>
+  <p><em>Click on the image to see in the 3D viewer and download it</em></p>
 </div>
   
   
@@ -77,11 +78,13 @@ En lugar de mostrar valores crudos en milímetros difíciles de interpretar, est
 6.  Repite para `HORIZON_2_RL` y `HORIZON_3_FR`.
 
 
+
 Hay un fichero STL con un adaptador a la tuerca original. Tras imprimir se puede insertar esta y pegarla. El adaptador tiene 12 lineas que pueden ser pintadas en contraste para un ajuste mas sencillo. Click en la imagen para abrir el visor 3D y descargar el fichero STL.  
 
   
 <div align="center">
-	
-	[![Ver y descargar](/_assets/bed_nut_handle.png)](/_assets/bed_nut_handle.stl)
-
+  <a href="/_assets/bed_nut_handle.stl">
+    <img src="/_assets/bed_nut_handle.png" alt="Ver y descargar">
+  </a>
+  <p><em>Haz clic en la imagen para interactuar con el modelo 3D y descargarlo</em></p>
 </div>
