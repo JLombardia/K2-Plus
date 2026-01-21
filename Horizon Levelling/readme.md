@@ -35,7 +35,7 @@ Instead of displaying raw millimeter values that are hard to interpret, this mac
 There is a STL file with a nut handle. After print, insert and glue them in the original nut. It has 12 lines than you can paint in contrast to do the adjustment easier.  
 
 	
-[![model preview](./_assets/bed_nut_handle.png)](./_assets/bed_nut_handle.stl)
+[![model preview](/_assets/bed_nut_handle.png)](/_assets/bed_nut_handle.stl)
 
 
 ## Spanish
