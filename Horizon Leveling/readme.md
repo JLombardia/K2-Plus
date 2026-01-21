@@ -1,30 +1,68 @@
-#### English
-An important adjustment is leveling the bed horizontally with respect to the X and Y axes. To do this, it is necessary to adjust the nuts located beneath the heated bed and perform a diagonal leveling process.
-In the first step, the printer will heat the bed and the nozzle, home itself, and take a reference point. For the remaining steps, you will need either a 0.10mm metal feeler gauge (highly recommended) or a standard sheet of paper, which typically measures around 0.08mm. You will go corner by corner, adjusting the bottom nut to set the level. It is advisable to repeat this process a couple of times.  
+## English
+This macro try to simplify manual bed tramming, ensuring the bed is perfectly parallel to the X and Y axes.  
+Instead of displaying raw millimeter values that are hard to interpret, this macro calculates exactly how much you need to turn each knob using a _clock face metaphor_.
+  
+  
+### 🌟 Key Features
+* **Fixed Reference:** Uses the Front Left (FL) corner as the "zero point" (Horizon Reference).
+* **"Clock" System:** Divides each knob into 12 positions (like the hours on a clock). The macro tells you exactly how many "hours" or positions to turn.
+* **Clear Instructions:** Displays simple console commands: `SCREW` (Tighten) or `UNSCREW` (Loosen).
+* **Range Protection:** If the deviation is too large (>2mm), the macro warns you to adjust the base reference instead of over-compressing springs.
+  
+  
+### ⚙️ Installation
 
-- Edit the file _printer.cfg_ and add in the includes section the line:
+1.  Edit the file _printer.cfg_ and add in the includes section the line:
  
      ````
-     [include macro___led_extrusor.cfg]
+     [include macro___horizon_leveling.cfg]
      ````
 
-- Copy the file _macro___level_nuts.cfg_ to the configuration folder.
+2.	Copy the file _macro___horizon_leveling.cfg_ to the configuration folder.
+3.  Adjust the `variable_screw_pitch` if your screws are not standard (M4 = 0.7mm).
+4.  **Important:** Verify the coordinates in `_HORIZON_VARS`. Ensure the probe (not the nozzle) is positioned directly above the screws.
+  
+  
+### 🚀 Usage
+1.  Home your printer (`G28`).
+2.  Run the macro for the first corner, for example: `HORIZON_1_RR` (Rear Right).
+3.  The printer will measure the reference (FL) and then the target corner.
+4.  Read the console. It will display a message like:
+    > *ACTION: SCREW (Tighten/Right) -> 3 positions (hours).*
+5.  Make the manual adjustment and repeat the measurement until it says "PERFECT".
+6.  Repeat for `HORIZON_2_RL` and `HORIZON_3_FR`.
 
 
-To start the process, press the NUT_1_CENTER button and wait for the printer to heat up and home to the center of the bed. Use the subsequent buttons (NUT_2..., NUT_3..., etc.) to perform the adjustments. Repeat steps 2 through 5 again. Finally, NUT_6_END will lift the nozzle and cool down the assembly.
+
+## Spanish
+El objetivo de este mcro es facilitar el nivelado manual (tramming) de la cama caliente para dejarla perfectamente paralela a los ejes X e Y.  
+En lugar de mostrar valores crudos en milímetros difíciles de interpretar, este macro calcula exactamente cuánto debes girar cada tuerca utilizando la _metáfora del reloj_.  
 
 
-#### Spanish
-Un ajuste importante es nivelar la cama horizontalmente respecto a los ejes X e Y. Para ello es necesario retocar las tuercas existentes por debajo de la cama caliente y realizar un proceso de ajuste en diagonal.
-En el primer paso la impresora calentará cama y nozzle, se centrará y tomará referencia. Para el resto necesitaremos bien una galga metálicade 0.10mm que es lo más recomendable, o bien la típica hoja de papel, que viene a medir 0.08mm. Iremos haciendo esquina por esquina tocando la tuerca inferior para ajustar el nivel. Es conveniente repetir el proceso un par de veces.
+### 🌟 Características Principales
+* **Referencia Fija:** Utiliza la esquina Frontal Izquierda (FL) como "punto cero" (Horizon Reference).
+* **Sistema de "Horas":** Divide cada tuerca en 12 posiciones (como las horas de un reloj). El macro te dice exactamente cuántas "horas" o posiciones girar.
+* **Instrucciones Claras:** Muestra en la consola comandos simples: `SCREW` (Atornillar/Apretar) o `UNSCREW` (Desatornillar/Aflojar).
+* **Protección de Rango:** Si la desviación es demasiado grande (>2mm), el macro te avisa para ajustar la referencia base en lugar de forzar los muelles.
+  
+  
+### ⚙️ Instalación
+1.  Inserta en _printer.cfg_ la linea:
 
-- Edita el fichero _printer.cfg_ y añade en la seccion de includes inicial la línea:
- 
      ````
-     [include macro___level_nuts.cfg]
+     [include macro___horizon_leveling.cfg]
      ````
-
-- Copia el fichero _macro___level_nuts.cfg_ a la carpeta de configuración.
-
-
-Para realizar el proceso pulsa el botón _NUT_1_CENTER_ y esperar a que caliente y se centre en la cama. Con los sucesivos _NUT_2_..._, _NUT_3_..., ... hacemos el ajuste. Repetir 2 a 5 de nuevo. Finalmente _NUT_6_END_ levanta el nozzle y enfría el conjunto.
+	 
+2.	Carga el fichero _macro___horizon_leveling.cfg_ en tu carpeta de configuración. 
+3.  Ajusta la variable `variable_screw_pitch` si tus tornillos no son estándar (M4 = 0.7mm).
+4.  **Importante:** Verifica las coordenadas en `_HORIZON_VARS`. Asegúrate de que la sonda (no la boquilla) se posicione justo encima de los tornillos.
+  
+  
+### 🚀 Uso
+1.  Haz "Home" en tu impresora (`G28`).
+2.  Ejecuta el macro para la primera esquina, por ejemplo: `HORIZON_1_RR` (Trasera Derecha).
+3.  La impresora medirá la referencia (FL) y luego la esquina objetivo.
+4.  Lee la consola. Te dirá algo como:
+    > *ACTION: SCREW (Tighten/Right) -> 3 positions (hours).*
+5.  Realiza el ajuste manual y repite la medición hasta que diga "PERFECT".
+6.  Repite para `HORIZON_2_RL` y `HORIZON_3_FR`.
