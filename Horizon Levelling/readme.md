@@ -15,7 +15,7 @@ Instead of displaying raw millimeter values that are hard to interpret, this mac
 	 default_type: echo
      ````  
 	 
-	 
+	  
 
 2.	Copy the file _macro___horizon_levelling.cfg_ to the configuration folder.
   
