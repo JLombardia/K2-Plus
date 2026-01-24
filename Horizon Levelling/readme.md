@@ -8,6 +8,13 @@ Instead of displaying raw millimeter values that are hard to interpret, this mac
      [include macro___horizon_levelling.cfg]
      ````
 
+	And at the end of _printer.cfg_ add the following section to activate M118 command to send message to the console:
+ 
+     ````
+     [respond]  
+	 default_type: echo
+     ````	
+
 2.	Copy the file _macro___horizon_levelling.cfg_ to the configuration folder.
   
   
@@ -38,7 +45,16 @@ En lugar de mostrar valores en milímetros difíciles de interpretar, este macro
 
      ````
      [include macro___horizon_leveling.cfg]
+ 
+    ````
+
+	Y al final de _printer.cfg_ hay que añadir la siguiente sección para activar que el comando M118 pueda enviar mensajes a la consola:
+ 
      ````
+     [respond]  
+	 default_type: echo
+     ``
+
 	 
 2.	Carga el fichero _macro___horizon_leveling.cfg_ en tu carpeta de configuración. 
   
